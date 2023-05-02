@@ -1,13 +1,10 @@
 ﻿void FillCoordinates(int[] point)
 {
-    Console.Write("Enter X = ");
-    point[(int) Axis.x] = Convert.ToInt32(Console.ReadLine());
-
-    Console.Write("Enter Y = ");
-    point[(int) Axis.y] = Convert.ToInt32(Console.ReadLine());
-
-    Console.Write("Enter Z = ");
-    point[(int) Axis.z] = Convert.ToInt32(Console.ReadLine());
+    for(int i = 0; i < (int) Axis.length; i++)
+    {
+        Console.Write("Enter {0} = ", Enum.GetName(typeof(Axis), i));
+        point[i] = Convert.ToInt32(Console.ReadLine());
+    }
 }
 
 double CalcDistance(int[] point1, int[] point2)
