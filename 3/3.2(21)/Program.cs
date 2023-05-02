@@ -15,9 +15,7 @@ double CalcDistance(int[] point1, int[] point2)
     double summSqrDiff = 0;
 
     for(int i = 0; i < (int) Axis.length; i++)
-    {
         summSqrDiff += Math.Pow(Convert.ToDouble(point2[i] - point1[i]), 2);
-    }
 
     return Math.Sqrt(summSqrDiff);
 }
