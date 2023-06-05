@@ -18,7 +18,7 @@ void CalcIntersectionPoint(double[] values, ref double x, ref double y)
 
 double x = 0;
 double y = 0;
-int accuracy = 1;
+const int ACCURACY = 1;
 
 double[] values = new double[(int) Vars.length];
 
@@ -34,7 +34,7 @@ else
 {
     CalcIntersectionPoint(values, ref x, ref y);
     Console.WriteLine("The lines intersect at a point (x, y): ({0}, {1})",
-                      Math.Pow(x, accuracy), Math.Pow(y, accuracy));
+                      Math.Round(x, ACCURACY), Math.Round(y, ACCURACY));
 }
 
 enum Vars
